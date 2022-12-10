@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    height: 100%;
+    width: 100%;
+    background: #DAA520;
+    font-family: "Fredoka", sans-serif;
+  }
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  .topTools {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0 10px 0;
+  }
+  .topTools .time {
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+  }
+  .topTools img {
+    width: 20px;
+    height: 20px;
+  }
+  .memory-game {
+    width: 550px;
+    margin: auto;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .memory-card {
+    margin: 5px;
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    position: relative;
+    transform: scale(1);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    box-shadow: 5px 2px 20px 0 rgba(82, 102, 117, 0.5);
+  }
+  .memory-card:hover {
+    cursor: pointer;
+  }
+  .memory-card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+  }
+  .memory-card.flip {
+    -ms-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  .front-face,
+  .back-face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .back-face {
+    background-color: white;
+  }
+  .front-face {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    background-color: white;
+  }
+
+  img {
+    width: 100px;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+  
+  .show {
+    display: block;
+  }
+  .final {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: auto;
+    padding: 10px 20px;
+  }
+  
+  .again {
+    font-size: 20px;
+    font-weight: bold;
+    color: #6186aa;
+    text-decoration: none;
+    margin: auto;
+    padding: 10px 20px;
+    width: 160px;
+    border: solid 1px;
+    border-radius: 5px;
+  }
+  
+  .again:hover {
+    background: #6186aa;
+    background-image: linear-gradient(to top left, #9b59b6, #1abc9c);
+    background-size: 250%;
+    color: white;
+    cursor: pointer;
+  }
+  
+  
